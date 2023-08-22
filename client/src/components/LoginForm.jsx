@@ -38,11 +38,11 @@ const LoginForm = () => {
       // }
 
       const { data } = await login({
-        variables: { ...formState },
+        variables: { ...userFormData },
       });
 
 
-      const { token, user } = await response.json();
+      //const { token, user } = await response.json();
       console.log(data.login.user);
       Auth.login(data.login.token);
     } catch (err) {
